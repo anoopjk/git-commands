@@ -35,7 +35,7 @@ git checkout -b <branch-name>
 git checkout --orphan <branch-name>
 
 #if you don't want any files from previous branches then do
-git rm --cached *.*
+git rm --cached -r .
 
 #delete a branch in remote repository, delete first the remote part then local
 git push origin --delete <branch-name>
