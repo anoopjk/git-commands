@@ -1,0 +1,46 @@
+
+
+#configuring your email-id and username 
+git config --global user.email <your email-id>
+git config --global user.name <username>
+
+#initailize git in a folder
+git init .
+
+#check the status of the current branch
+git status
+
+#add files 
+git add <file-name>            #use *.* for all files, *.<dot-extension> for specific type of files
+
+#commit message
+git commit -m "message goes here"
+
+#adding the git remote repository name
+git remote add origin <repository-url>
+
+#verify the origin/ github repository
+git remote -v
+
+#pull the branch from origin and merge it
+git pull origin <branch-name>  #followed by authentication
+
+#push the files to origin
+git push origin <branch-name> #followed by authnetication
+
+#create and check into a new branch, it contains the files from previous branches
+git checkout -b <branch-name>
+
+#create an empty new branch, 
+git checkout --orphan <branch-name>
+
+#if you don't want any files from previous branches then do
+git rm --cached *.*
+
+#delete a branch in remote repository, delete first the remote part then local
+git push origin --delete <branch-name>
+
+#delete branch locally
+git branch -D <branch-name>
+
+
